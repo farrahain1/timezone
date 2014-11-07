@@ -10,7 +10,7 @@ class SecureApplicationController < ActionController::Base
  private
  
   def check_login
-      unless logged_in?
+      unless logged_in? && params[:action] != "home"
         flash[:danger] = 'You must logged in first!'
         redirect_to signin_path
       end

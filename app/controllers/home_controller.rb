@@ -1,6 +1,5 @@
-class HomeController < SecureApplicationController
+class HomeController < ApplicationController
    include SessionsHelper
-   
     
     def index
         #@user = User.all

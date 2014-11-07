@@ -1,4 +1,4 @@
-class UsersController < SecureApplicationController
+class UsersController < ApplicationController
     include SessionsHelper
     
      

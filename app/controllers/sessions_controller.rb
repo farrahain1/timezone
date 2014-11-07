@@ -1,4 +1,4 @@
-class SessionsController < SecureApplicationController
+class SessionsController < ApplicationController
     include SessionsHelper
     
     def new
