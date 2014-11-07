@@ -15,11 +15,11 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav pull-right">
       <% if logged_in? %>
-        <li><%= link_to 'Profile', root_path %></li>
+        <li><%= link_to 'MyProfile', root_path %></li>
         <li><%= link_to 'List of Users', list_path %></li>
       <% end %>
-        <li><%= link_to 'About', aboutUs_path %></li>
-        <li><%= link_to 'Contact', contactUs_path %></li>
+        <li><%= link_to 'About Us', aboutUs_path %></li>
+        <li><%= link_to 'Contact Us', contactUs_path %></li>
         <% if logged_in? %>
           <li><%= link_to 'Sign Out', signout_path, method: :delete %></li>
         <% else %>
