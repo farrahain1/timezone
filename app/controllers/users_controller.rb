@@ -17,10 +17,7 @@ class UsersController < ApplicationController
             render 'new'
         end
     end
-    
-    def show
-        @user = User.find(params[:id])
-    end
+   
     
     def edit
         @user = User.find(params[:id])
@@ -35,8 +32,12 @@ class UsersController < ApplicationController
         end
     end
     
+    def show
+        @user = User.find(params[:id])
+    end
+    
     def index
-        #@user = User.all
+       # @user = User.all
          #@user = User.find(params[:id])
          @user = current_user
     end
