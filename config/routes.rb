@@ -5,7 +5,11 @@ Workspace::Application.routes.draw do
   get 'signup' => 'users#new'
   get 'signin' => 'sessions#new'
   post 'signin' => 'sessions#create'
+  get 'aboutUs' => 'home#about'
+  get 'contactUs' => 'home#contact'
+  
   delete 'signout' => 'sessions#destroy'
+  
   
   root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.

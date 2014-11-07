@@ -1,0 +1,101 @@
+[1mdiff --git a/app/views/users/new.html.erb b/app/views/users/new.html.erb[m
+[1mindex 1408a31..ce8cbcd 100644[m
+[1m--- a/app/views/users/new.html.erb[m
+[1m+++ b/app/views/users/new.html.erb[m
+[36m@@ -1,43 +1,57 @@[m
+[31m-<div class="row">[m
+[31m-    <div class="col-xs-12">[m
+[31m-        <div class="page-header">[m
+[31m-          <h1>Sign Up</h1>[m
+[32m+[m[32m<div class="container" id="signup">[m
+[32m+[m[32m    <div class="row">[m
+[32m+[m[32m        <div class="col-xs-6">[m
+[32m+[m[32m            <div class="page-header">[m
+[32m+[m[32m              <h1>Sign Up</h1>[m
+[32m+[m[32m            </div>[m
+         </div>[m
+[31m-    </div>[m
+[31m-</div>[m
+[31m-[m
+[31m-<div class="row">[m
+[31m-    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">[m
+         [m
+[31m-        <% if @user.errors.any? %>[m
+[31m-            <% @user.errors.full_messages.each do |error| %>[m
+[31m-                <div class="alert alert-danger">[m
+[31m-                    <%= error %>[m
+[31m-                </div>[m
+[32m+[m[32m        <div class="col-xs-6">[m
+[32m+[m[32m            <div class="page-header">[m
+[32m+[m[32m                <h2>Choose Timezone on MrTimeZone</h2>[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m    <div class="row">[m
+[32m+[m[32m        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">[m
+[32m+[m[41m            [m
+[32m+[m[32m            <% if @user.errors.any? %>[m
+[32m+[m[32m                <% @user.errors.full_messages.each do |error| %>[m
+[32m+[m[32m                    <div class="alert alert-danger">[m
+[32m+[m[32m                        <%= error %>[m
+[32m+[m[32m                    </div>[m
+[32m+[m[32m                <% end %>[m
+             <% end %>[m
+[31m-        <% end %>[m
+[31m-       [m
+[31m-        <%= form_for @user do |f| %>[m
+[31m-             <div class="form-group">[m
+[31m-                <%= f.label :name %>[m
+[31m-                <%= f.text_field :name, class: 'form-control' %>[m
+[31m-              </div>[m
+[31m-              <div class="form-group">[m
+[31m-                <%= f.label :email %>[m
+[31m-                <%= f.text_field :email, class: 'form-control' %>[m
+[31m-              </div>[m
+[31m-              <div class="form-group">[m
+[31m-                <%= f.label :password %>[m
+[31m-                <%= f.password_field :password, class: 'form-control' %>[m
+[31m-              </div>[m
+[31m-              <div class="form-group">[m
+[31m-                <%= f.label :password_confirmation %>[m
+[31m-                <%= f.password_field :password_confirmation, class: 'form-control' %>[m
+[31m-              </div>[m
+[31m-              <div class="form-group">[m
+[31m-                <%= f.submit 'Sign up', class: 'btn btn-primary' %>[m
+[31m-                <p>Already Have an account?<%= link_to ' Sign In here!', signin_path %></p>[m
+[31m-              </div>[m
+[31m-        <% end %>[m
+[32m+[m[41m           [m
+[32m+[m[32m            <%= form_for @user do |f| %>[m
+[32m+[m[32m                 <div class="form-group">[m
+[32m+[m[32m                    <%= f.label :name %>[m
+[32m+[m[32m                    <%= f.text_field :name, class: 'form-control' %>[m
+[32m+[m[32m                  </div>[m
+[32m+[m[32m                  <div class="form-group">[m
+[32m+[m[32m                    <%= f.label :email %>[m
+[32m+[m[32m                    <%= f.text_field :email, class: 'form-control' %>[m
+[32m+[m[32m                  </div>[m
+[32m+[m[32m                  <div class="form-group">[m
+[32m+[m[32m                    <%= f.label :password %>[m
+[32m+[m[32m                    <%= f.password_field :password, class: 'form-control' %>[m
+[32m+[m[32m                  </div>[m
+[32m+[m[32m                  <div class="form-group">[m
+[32m+[m[32m                    <%= f.label :password_confirmation %>[m
+[32m+[m[32m                    <%= f.password_field :password_confirmation, class: 'form-control' %>[m
+[32m+[m[32m                  </div>[m
+[32m+[m[32m                  <div class="form-group">[m
+[32m+[m[32m                    <%= f.submit 'Sign up', class: 'btn btn-primary' %>[m
+[32m+[m[32m                    <p>Already Have an account?<%= link_to ' Sign In here!', signin_path %></p>[m
+[32m+[m[32m                  </div>[m
+[32m+[m[32m            <% end %>[m
+[32m+[m[32m        </div>[m
+[32m+[m[41m  [m
+[32m+[m[32m        <div class="col-xs-6 col-lg-offset-3">[m
+[32m+[m[32m            <%=image_tag("timezone.jpg", alt: "World Timezone")%>[m
+[32m+[m[32m            <h3>.The World TimeZone.</h3>[m
+[32m+[m[41m            [m
+[32m+[m[32m        </div>[m
+     </div>[m
+ </div>[m
+\ No newline at end of file[m
