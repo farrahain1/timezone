@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class UsersController < SecureApplicationController
     include SessionsHelper
     
      
@@ -33,6 +33,12 @@ class UsersController < ApplicationController
         else
           render 'edit'
         end
+    end
+    
+    def index
+        #@user = User.all
+         #@user = User.find(params[:id])
+         @user = current_user
     end
     
     
