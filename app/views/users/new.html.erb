@@ -1,43 +1,57 @@
-<div class="row">
-    <div class="col-xs-12">
-        <div class="page-header">
-          <h1>Sign Up</h1>
+<div class="container" id="signup">
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="page-header">
+              <h1>Sign Up</h1>
+            </div>
+        </div>
+        
+        <div class="col-xs-6">
+            <div class="page-header">
+                <h2>Choose Timezone on MrTimeZone</h2>
+            </div>
         </div>
     </div>
-</div>
-
-<div class="row">
-    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
-        
-        <% if @user.errors.any? %>
-            <% @user.errors.full_messages.each do |error| %>
-                <div class="alert alert-danger">
-                    <%= error %>
-                </div>
+    
+    <div class="row">
+        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            
+            <% if @user.errors.any? %>
+                <% @user.errors.full_messages.each do |error| %>
+                    <div class="alert alert-danger">
+                        <%= error %>
+                    </div>
+                <% end %>
             <% end %>
-        <% end %>
-       
-        <%= form_for @user do |f| %>
-             <div class="form-group">
-                <%= f.label :name %>
-                <%= f.text_field :name, class: 'form-control' %>
-              </div>
-              <div class="form-group">
-                <%= f.label :email %>
-                <%= f.text_field :email, class: 'form-control' %>
-              </div>
-              <div class="form-group">
-                <%= f.label :password %>
-                <%= f.password_field :password, class: 'form-control' %>
-              </div>
-              <div class="form-group">
-                <%= f.label :password_confirmation %>
-                <%= f.password_field :password_confirmation, class: 'form-control' %>
-              </div>
-              <div class="form-group">
-                <%= f.submit 'Sign up', class: 'btn btn-primary' %>
-                <p>Already Have an account?<%= link_to ' Sign In here!', signin_path %></p>
-              </div>
-        <% end %>
+           
+            <%= form_for @user do |f| %>
+                 <div class="form-group">
+                    <%= f.label :name %>
+                    <%= f.text_field :name, class: 'form-control' %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.label :email %>
+                    <%= f.text_field :email, class: 'form-control' %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.label :password %>
+                    <%= f.password_field :password, class: 'form-control' %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.label :password_confirmation %>
+                    <%= f.password_field :password_confirmation, class: 'form-control' %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.submit 'Sign up', class: 'btn btn-primary' %>
+                    <p>Already Have an account?<%= link_to ' Sign In here!', signin_path %></p>
+                  </div>
+            <% end %>
+        </div>
+  
+        <div class="col-xs-6 col-lg-offset-3">
+            <%=image_tag("timezone.jpg", alt: "World Timezone")%>
+            <h3>.The World TimeZone.</h3>
+            
+        </div>
     </div>
 </div>
