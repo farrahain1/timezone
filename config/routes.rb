@@ -7,6 +7,7 @@ Workspace::Application.routes.draw do
   post 'signin' => 'sessions#create'
   get 'aboutUs' => 'home#about'
   get 'contactUs' => 'home#contact'
+  get 'list' => 'home#list'
   
   delete 'signout' => 'sessions#destroy'
   
