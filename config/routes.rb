@@ -2,15 +2,16 @@ Workspace::Application.routes.draw do
   
   resources :users
   
+  get 'aboutUs' => 'home#about'
+  get 'contactUs' => 'home#contact'
+  get 'list' => 'home#list'
   get 'signup' => 'users#new'
   get 'signin' => 'sessions#new'
   post 'signin' => 'sessions#create'
   delete 'signout' => 'sessions#destroy'
   get 'user' => 'users#show'
   get 'editUser' => 'users#edit'
-  get 'aboutUs' => 'home#about'
-  get 'contactUs' => 'home#contact'
-  get 'list' => 'home#list'
+
   
   
   
