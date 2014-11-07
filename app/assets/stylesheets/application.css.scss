@@ -94,4 +94,61 @@
   font-size: 20px;
  }
 }
+
+#blog {
+ background-color:#e7ddff;
+ 
+ header{
+  border: 1px solid;
+  h5{
+   color: white;
+  }
+ }
+ 
+ body{
+		border: 1px solid;
+		background: white;
+ }
+}
+
+.blog-info{
+ margin-top:10px;
+	background-color: #5b90bf;
+	}
+	.blog-header{
+		border: 1px solid #5e61f4;
+		h5.blog-title {
+		 margin-left: 10px;
+		 font-family: "Georgia";
+			color: white;
+			font-size: 20px;
+		}
+	}
+	.blog-body{
+	 
+		border: 1px solid #5e61f4;
+		background: white;
+		h1 {
+		 margin-left: 10px;
+		 font-size:15px;
+		}
+	}
+	
+	#about {
+	 background-color:#e7ddff;
+	 width: 350px;
+	 h1{
+   font-family: "Georgia";
+   font-weight: "bold";
+   font-size: 50px;
+ }
+	 
+	 h4 {
+  font-family: "Serif";
+  font-style: bold;
+  font-size: 15px;
+ }
+ 
+	}
+
  
