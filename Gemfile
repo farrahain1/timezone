@@ -49,5 +49,6 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 
 gem 'bootstrap-sass', '~> 3.3.0'
 gem 'autoprefixer-rails'
+gem 'sprockets', '=2.11.0'
 
 
