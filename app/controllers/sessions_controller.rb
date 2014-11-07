@@ -20,7 +20,7 @@ class SessionsController < ApplicationController
     
      def destroy
         session.delete(:user_id) if logged_in?
-        redirect_to root_path, flash: { success: 'Logged out!' }
+        redirect_to signin_path, flash: { success: 'Logged out!' }
      end
     
 end
