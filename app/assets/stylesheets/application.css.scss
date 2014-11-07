@@ -14,3 +14,22 @@
  
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+#nav {
+ h1{
+  display: inline-block;
+ }
+ 
+ ul{
+  display: inline-block;
+ }
+}
+
+#footer{
+  background: #f7f7f7;
+  border-top: 1px solid #e7e7e7;
+  text-align: center;
+  padding: 7px;
+  width: 100%;
+ 
+}
