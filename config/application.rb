@@ -16,6 +16,7 @@ module Workspace
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     # config.time_zone = 'Central Time (US & Canada)'
 
+    config.assets.initialize_on_precompile = false
     config.i18n.enforce_available_locales=false
     I18n.config.enforce_available_locales
     config.i18n.default_locale = :de
