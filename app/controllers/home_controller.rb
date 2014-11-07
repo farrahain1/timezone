@@ -1,9 +1,13 @@
 class HomeController < ApplicationController
+   include SessionsHelper
    
     
     def index
-        @users = User.all
+        #@user = User.all
+         #@user = User.find(params[:id])
+         @user = current_user
     end
+    
     
     def about
     end
@@ -15,6 +19,7 @@ class HomeController < ApplicationController
         @users = User.all
     end
     
+  
     
      
 end

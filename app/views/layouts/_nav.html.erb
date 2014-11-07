@@ -16,6 +16,7 @@
       <ul class="nav navbar-nav pull-right">
       <% if logged_in? %>
         <li><%= link_to 'MyProfile', root_path %></li>
+        <li><%= link_to "Edit Account", edit_user_path(current_user) %></li>
         <li><%= link_to 'List of Users', list_path %></li>
       <% end %>
         <li><%= link_to 'About Us', aboutUs_path %></li>

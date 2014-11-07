@@ -8,6 +8,8 @@ Workspace::Application.routes.draw do
   get 'aboutUs' => 'home#about'
   get 'contactUs' => 'home#contact'
   get 'list' => 'home#list'
+  get 'user' => 'users#show'
+  get 'editUser' => 'users#edit'
   
   delete 'signout' => 'sessions#destroy'
   
